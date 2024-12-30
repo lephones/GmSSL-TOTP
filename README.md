@@ -5,8 +5,9 @@
 
 请先build对应平台的.a文件，再将对静态库复制到lib目录，参考CMakeLists.txt
 
-例：Android 注意 Android下的CMakeList要修改，比如add_executable要改为add_library
-
-# makedir build 
-# cd build
+例：Android 注意CMakeList可能要修改
+```
+makedir build 
+cd build
 cmake .. -DCMAKE_TOOLCHAIN_FILE=$ANDROID_NDK_HOME/build/cmake/android.toolchain.cmake -DANDROID_ABI=arm64-v8a -DANDROID_PLATFORM=21 -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=OFF
+```

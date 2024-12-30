@@ -19,7 +19,7 @@ add_library(
 )
 
 # 添加源文件到项目中
-add_executable(gmssl-totp src/sm3_dpwd.cpp src/sm4_dpwd.cpp)
+add_library(gmssl-totp src/sm3_dpwd.cpp src/sm4_dpwd.cpp)
 
 # link
 target_link_libraries(${CMAKE_PROJECT_NAME}
